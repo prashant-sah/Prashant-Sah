@@ -68,7 +68,7 @@ h2{font:700 clamp(1.8rem,3.5vw,2.4rem)/1.1 var(--head);letter-spacing:-.02em;mar
 .tags{display:flex;gap:8px;flex-wrap:wrap}
 .tags span{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 11px;font-size:.9rem}
 .card .tags span{font-size:.8rem;padding:2px 9px;background:transparent}
-.card a.link{margin-top:auto;font-weight:600;color:var(--accent);text-decoration:none}
+.note{color:var(--muted);margin:-16px 0 24px}.links{display:flex;gap:16px;flex-wrap:wrap;margin-top:auto}.card a.link{font-weight:600;color:var(--accent);text-decoration:none}
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px 40px}
 .skills h3{font:600 1rem var(--body);margin:0 0 8px}
 .edu{display:grid;gap:14px;margin-top:40px}
@@ -150,22 +150,26 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px sol
 
 <section id="projects"><div class="wrap">
 <h2>Selected projects</h2>
+<p class="note">Client apps are linked to their public store listings. Their source code is private.</p>
 <div class="grid">
-<article class="card feature"><h3>Avionté 247, WorkN and KellyNow</h3><p>White-label staffing apps built from one shared iOS framework, serving US staffing agency clients.</p><div class="tags"><span>UIKit</span><span>SwiftUI</span><span>Auth0</span><span>GitHub Actions</span></div></article>
-<article class="card"><h3>Farm Service Manager</h3><p>Australian digital logbook for farm owners and contractors to track service and maintenance history across machinery and vehicles.</p></article>
-<article class="card"><h3>DoubleGuard</h3><p>Wellness platform for first responders that combines biometric data with psychological and social assessments to produce safety and performance insights.</p></article>
-<article class="card"><h3>ACM Agriculture (The Land)</h3><p>Regional news app family for Australia’s largest rural publisher, adding rainfall tracking, livestock market data and machinery listings.</p></article>
-<article class="card"><h3>Caroo</h3><p>Car marketplace for private sellers and dealers, delivered end-to-end including UX/UI design and a companion website.</p></article>
-<article class="card"><h3>YouChoose Pets &amp; Livestock</h3><p>Marketplace for animal breeders with breeder profiles, visual pedigree tracking and in-app breeder verification.</p></article>
-<article class="card"><h3>Ice.Breaker</h3><p>Location-based social app that helps people find and connect with others nearby through a live proximity heat map.</p></article>
+<article class="card feature"><h3>Avionté 247, WorkN and KellyNow</h3><p>White-label staffing apps built from one shared iOS framework, serving US staffing agency clients.</p><div class="tags"><span>UIKit</span><span>SwiftUI</span><span>Auth0</span><span>GitHub Actions</span></div><div class="links"><a class="link" href="https://apps.apple.com/us/app/avionte-247/id1105932355" target="_blank" rel="noopener">Avionté 247</a><a class="link" href="https://apps.apple.com/us/app/workn/id1083075642" target="_blank" rel="noopener">WorkN</a><a class="link" href="https://apps.apple.com/us/app/kelly-now/id1573797290" target="_blank" rel="noopener">KellyNow</a></div></article>
+<article class="card"><h3>Farm Service Manager</h3><p>Australian digital logbook for farm owners and contractors to track service and maintenance history across machinery and vehicles.</p><div class="links"><a class="link" href="https://apps.apple.com/us/app/farm-service-manager/id1368415965" target="_blank" rel="noopener">View on App Store</a></div></article>
+<article class="card"><h3>DoubleGuard</h3><p>Wellness platform for first responders that combines biometric data with psychological and social assessments to produce safety and performance insights.</p><div class="links"><a class="link" href="https://apps.apple.com/us/app/doubleguard/id6475751528" target="_blank" rel="noopener">View on App Store</a></div></article>
+<article class="card"><h3>ACM Agriculture (The Land)</h3><p>Regional news app family for Australia’s largest rural publisher, adding rainfall tracking, livestock market data and machinery listings.</p><div class="links"><a class="link" href="https://apps.apple.com/us/app/the-land-news-livestock/id1642291552" target="_blank" rel="noopener">View on App Store</a></div></article>
+<article class="card"><h3>Caroo</h3><p>Car marketplace for private sellers and dealers, delivered end-to-end including UX/UI design and a companion website.</p><div class="links"><a class="link" href="https://apps.apple.com/au/app/caroo/id1626950108" target="_blank" rel="noopener">View on App Store</a></div></article>
+<article class="card"><h3>YouChoose Pets &amp; Livestock</h3><p>Marketplace for animal breeders with breeder profiles, visual pedigree tracking and in-app breeder verification.</p><div class="links"><a class="link" href="https://play.google.com/store/apps/details?id=com.drivnn.youchoosepets" target="_blank" rel="noopener">View on Google Play</a></div></article>
+<article class="card"><h3>Ice.Breaker</h3><p>Location-based social app that helps people find and connect with others nearby through a live proximity heat map.</p><div class="links"><a class="link" href="https://apps.apple.com/us/app/ice-breaker-app/id1564213751" target="_blank" rel="noopener">View on App Store</a></div></article>
 <article class="card"><h3>Dragonfly</h3><p>Ride-sharing app with TomTom Maps for live location and routing, built end-to-end. The client shelved it before launch.</p></article>
 <article class="card"><h3>White Bow Gift Registry</h3><p>iOS and web app for building a gift registry from any store, with real-time purchase tracking to prevent duplicate gifts. No longer live on the App Store.</p></article>
 </div>
 <h2 style="margin-top:56px">Side projects</h2>
+<p class="note">Open source on GitHub.</p>
 <div class="grid">
-<article class="card"><h3>Chord recognition model</h3><p>A deep learning model that detects chords from audio, using a CNN with a BLSTM.</p><div class="tags"><span>Python</span><span>TensorFlow</span><span>Keras</span></div><a class="link" href="https://github.com/prashant-sah" target="_blank" rel="noopener">View on GitHub</a></article>
-<article class="card"><h3>audio-ios</h3><p>An iOS audio player with adjustable playback rate and pitch.</p><div class="tags"><span>Swift</span></div><a class="link" href="https://github.com/prashant-sah/audio-ios" target="_blank" rel="noopener">View on GitHub</a></article>
-<article class="card"><h3>ShopifyGraphQL</h3><p>A Swift project integrating Shopify through GraphQL.</p><div class="tags"><span>Swift</span><span>GraphQL</span></div><a class="link" href="https://github.com/prashant-sah/ShopifyGraphQL" target="_blank" rel="noopener">View on GitHub</a></article>
+<article class="card feature"><h3>SmartGallery</h3><p>Fully offline photo search for iOS and Android. It indexes your library, tags people by face and answers natural-language queries such as “the dog at the beach”. A Rust core and Flutter UI run face detection, face embedding and CLIP models on-device.</p><div class="tags"><span>Flutter</span><span>Rust</span><span>ONNX Runtime</span><span>CLIP</span></div><div class="links"><a class="link" href="https://github.com/prashant-sah/SmartGallery" target="_blank" rel="noopener">View on GitHub</a></div></article>
+<article class="card"><h3>VideoRestore</h3><p>A macOS app for Apple Silicon that turns flickery black-and-white video into clean, colorized 2K footage. It chains deflicker, colorization and upscaling stages, with a GUI and a scriptable CLI sharing one job queue.</p><div class="tags"><span>Python</span><span>Apple Silicon (MPS)</span><span>Real-ESRGAN</span></div><div class="links"><a class="link" href="https://github.com/prashant-sah/VideoRestoreAndColorize" target="_blank" rel="noopener">View on GitHub</a></div></article>
+<article class="card"><h3>Chord recognition</h3><p>A deep learning model that detects chords from audio, using a CNN with a BLSTM, with experiments in notebooks.</p><div class="tags"><span>Python</span><span>TensorFlow</span><span>Keras</span></div><div class="links"><a class="link" href="https://github.com/prashant-sah/chord-recognition" target="_blank" rel="noopener">View on GitHub</a></div></article>
+<article class="card"><h3>audio-ios</h3><p>An iOS audio player with adjustable playback rate and pitch.</p><div class="tags"><span>Swift</span></div><div class="links"><a class="link" href="https://github.com/prashant-sah/audio-ios" target="_blank" rel="noopener">View on GitHub</a></div></article>
+<article class="card"><h3>ShopifyGraphQL</h3><p>A Swift project integrating Shopify through GraphQL.</p><div class="tags"><span>Swift</span><span>GraphQL</span></div><div class="links"><a class="link" href="https://github.com/prashant-sah/ShopifyGraphQL" target="_blank" rel="noopener">View on GitHub</a></div></article>
 </div>
 </div></section>
 
@@ -178,6 +182,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px sol
 <div><h3>Data and networking</h3><div class="tags"><span>Core Data</span><span>Realm</span><span>REST</span><span>GraphQL</span></div></div>
 <div><h3>Frameworks and SDKs</h3><div class="tags"><span>HealthKit</span><span>WatchKit</span><span>MapKit</span><span>StoreKit</span><span>Auth0</span><span>Firebase</span><span>AWS Amplify</span><span>TomTom</span><span>Google Maps</span><span>CometChat</span><span>Branch</span></div></div>
 <div><h3>Build and release</h3><div class="tags"><span>Swift Package Manager</span><span>CocoaPods</span><span>Fastlane</span><span>GitHub Actions</span><span>CircleCI</span><span>Azure DevOps</span><span>Jira</span></div></div>
+<div><h3>Beyond iOS</h3><div class="tags"><span>Flutter</span><span>Dart</span><span>Rust</span><span>Python</span><span>TensorFlow</span><span>Keras</span></div></div>
 <div><h3>Quality</h3><div class="tags"><span>Unit testing</span><span>Instruments profiling</span><span>Crashlytics</span></div></div>
 </div>
 <div class="edu">
