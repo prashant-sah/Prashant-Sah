@@ -1,77 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prashant Sah | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prashant Sah | Senior iOS Developer</title>
+<meta name="description" content="Prashant Sah is a Senior iOS Developer with 9+ years of experience shipping native apps. He owns a shared framework that powers 90+ white-label apps.">
+<meta property="og:title" content="Prashant Sah | Senior iOS Developer">
+<meta property="og:description" content="9+ years shipping native iOS apps: UIKit, SwiftUI, MVVM-C, and a framework powering 90+ white-label apps.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://prashant-sah.com.np/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f7;--surface:#fff;--ink:#13203a;--muted:#52607a;--line:#d5dde9;--accent:#2b59e6;--accent-ink:#fff;--signal:#14a37f;
+--head:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;--body:"Instrument Sans","Avenir Next","Segoe UI",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1626;--surface:#16213a;--ink:#eaf0fb;--muted:#9fb0cc;--line:#26345a;--accent:#7c9cff;--accent-ink:#0e1626;--signal:#3ddbb0}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:700 1.15rem var(--head);text-decoration:none}
+nav{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink)!important;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink)!important;border:1.5px solid var(--line)}
+.btn:hover{filter:brightness(1.08)}
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;padding:72px 0 80px}
+h1{font:700 clamp(2.5rem,5.6vw,4.2rem)/1.03 var(--head);letter-spacing:-.03em;margin:0 0 20px}
+.lede{font-size:1.2rem;color:var(--muted);max-width:34em;margin:0 0 28px}
+.facts{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 24px;padding:0;list-style:none}
+.facts li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:.9rem;color:var(--muted)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.phone{justify-self:center;width:250px;aspect-ratio:9/18.5;background:#0b1020;border-radius:40px;padding:10px;box-shadow:0 30px 60px -20px rgba(19,32,58,.45)}
+.screen{height:100%;border-radius:31px;background:linear-gradient(170deg,#1b2a52,#0d1430);padding:46px 18px 20px;display:flex;flex-direction:column;color:#eaf0fb;position:relative}
+.screen::before{content:"";position:absolute;top:9px;left:50%;width:78px;height:22px;background:#05080f;border-radius:99px;transform:translateX(-50%)}
+.icons{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.icons i{aspect-ratio:1;border-radius:22%;background:linear-gradient(160deg,hsl(var(--h) 75% 62%),hsl(calc(var(--h) + 30) 70% 42%));opacity:0;animation:pop .4s ease-out forwards;animation-delay:calc(var(--n,0) * 45ms)}
+.cap{margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,.14);font:700 1rem var(--head);line-height:1.25}
+.cap small{display:block;font:500 .78rem var(--body);color:#9fb0cc;margin-top:2px}
+@keyframes pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.icons i{animation:none;opacity:1}html{scroll-behavior:auto}}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(1.8rem,3.5vw,2.4rem)/1.1 var(--head);letter-spacing:-.02em;margin:0 0 32px}
+.numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;padding:0;margin:0 0 8px;list-style:none}
+.numbers li{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+.numbers b{display:block;font:700 2rem/1.1 var(--head);color:var(--accent)}
+.numbers span{color:var(--muted);font-size:.95rem}
+.job{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:28px 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:0}
+.when{color:var(--muted);font-size:.95rem}
+.when strong{display:block;color:var(--ink);font-size:1.05rem}
+.job h3{font:700 1.3rem var(--head);margin:0 0 2px}
+.job .what{color:var(--muted);margin:0 0 12px}
+.job ul{margin:0;padding-left:1.1em}
+.job li{margin-bottom:8px;max-width:46em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.card.feature{grid-column:1/-1;border-left:6px solid var(--signal)}
+.card h3{font:700 1.2rem var(--head);margin:0}
+.card p{margin:0;color:var(--muted)}
+.tags{display:flex;gap:8px;flex-wrap:wrap}
+.tags span{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:4px 11px;font-size:.9rem}
+.card .tags span{font-size:.8rem;padding:2px 9px;background:transparent}
+.card a.link{margin-top:auto;font-weight:600;color:var(--accent);text-decoration:none}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px 40px}
+.skills h3{font:600 1rem var(--body);margin:0 0 8px}
+.edu{display:grid;gap:14px;margin-top:40px}
+.edu p{margin:0}
+.edu span{color:var(--muted)}
+.contact{display:flex;gap:40px;justify-content:space-between;flex-wrap:wrap;align-items:flex-end}
+.contact p{max-width:30em;color:var(--muted);margin:0}
+footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:820px){.hero{grid-template-columns:1fr;padding:48px 0 56px}.job{grid-template-columns:1fr;gap:8px}nav a:not(.btn){display:none}}
+</style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body>
+<header><div class="wrap">
+<a class="logo" href="#top">Prashant Sah</a>
+<nav aria-label="Main"><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a class="btn" href="#contact">Contact</a></nav>
+</div></header>
+<main id="top">
+<div class="wrap hero">
+<div>
+<ul class="facts"><li>Senior iOS Developer</li><li>9+ years</li><li>Lalitpur, Nepal</li></ul>
+<h1>Native iOS apps, built to last and shipped to the App Store.</h1>
+<p class="lede">I’ve shipped apps in staffing, fitness, social and ride-sharing. I own a shared framework that powers 90+ white-label apps, and I’m the person teams call for the production bugs nobody else can reproduce.</p>
+<div class="cta"><a class="btn" href="#experience">See my experience</a><a class="btn ghost" href="Prashant-Sah-Resume.pdf">Download resume</a><a class="btn ghost" href="https://www.linkedin.com/in/prashant-sah-545a5685/" target="_blank" rel="noopener">LinkedIn</a></div>
+</div>
+<div class="phone" role="img" aria-label="Phone home screen filled with app icons, showing one framework powering many white-label apps">
+<div class="screen"><div class="icons" aria-hidden="true"><i style="--h:0;--n:0"></i><i style="--h:47;--n:1"></i><i style="--h:94;--n:2"></i><i style="--h:141;--n:3"></i><i style="--h:188;--n:4"></i><i style="--h:235;--n:5"></i><i style="--h:282;--n:6"></i><i style="--h:329;--n:7"></i><i style="--h:16;--n:8"></i><i style="--h:63;--n:9"></i><i style="--h:110;--n:10"></i><i style="--h:157;--n:11"></i><i style="--h:204;--n:12"></i><i style="--h:251;--n:13"></i><i style="--h:298;--n:14"></i><i style="--h:345;--n:15"></i><i style="--h:32;--n:16"></i><i style="--h:79;--n:17"></i><i style="--h:126;--n:18"></i><i style="--h:173;--n:19"></i><i style="--h:220;--n:20"></i><i style="--h:267;--n:21"></i><i style="--h:314;--n:22"></i><i style="--h:1;--n:23"></i></div>
+<div class="cap">One framework, 90+ apps<small>White-label staffing apps from a single codebase</small></div></div>
+</div>
+</div>
 
-  <!-- Navbar -->
-  <header class="bg-white shadow-md fixed w-full top-0 z-50">
-    <nav class="max-w-5xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold">Prashant Sah</h1>
-      <ul class="flex gap-6">
-        <li><a href="#about" class="hover:text-blue-600">About</a></li>
-        <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
-        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<section id="impact"><div class="wrap">
+<h2>Impact in numbers</h2>
+<ul class="numbers">
+<li><b>90+</b><span>white-label apps powered by one shared package I maintain</span></li>
+<li><b>80%+</b><span>of reported crashes across 20 apps traced to one bug I fixed</span></li>
+<li><b>10+</b><span>junior developers mentored through reviews and training</span></li>
+<li><b>9+ yrs</b><span>shipping native iOS apps through App Store release</span></li>
+</ul>
+</div></section>
 
-  <!-- Hero Section -->
-  <section class="min-h-screen flex items-center justify-center text-center px-4 bg-gradient-to-r from-blue-50 to-blue-100">
-    <div>
-      <img src="assets/profile.jpg" alt="Profile" class="w-32 h-32 rounded-full mx-auto shadow-lg mb-4">
-      <h2 class="text-3xl font-bold">Hi, I’m Prashant 👋</h2>
-      <p class="mt-3 text-lg text-gray-700">iOS Developer | ML Enthusiast | Open Source Contributor</p>
-      <a href="#projects" class="mt-6 inline-block px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">View My Work</a>
-    </div>
-  </section>
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<div class="job"><div class="when"><strong>Jul 2025 – Aug 2026</strong>Lalitpur, Nepal</div><div>
+<h3>Senior iOS Developer, Impetus Incorporation</h3><p class="what">Avionté Staffing Software: a US staffing platform and its white-label variants</p>
+<ul>
+<li>Primary contributor, in a 4-person iOS team, to a shared package powering 90+ white-label staffing apps, using custom sync scripts to keep every client repository consistent.</li>
+<li>Root-caused a WKWebView crash that QA couldn’t reproduce for over a year. It made up more than 80% of reported crashes across 20 apps, and I found it after two weeks of hypothesis-driven investigation when standard crash symbolication failed.</li>
+<li>Found and fixed an Auth0 session-handling defect that silently logged users out when connectivity dropped, a bug that had slipped past QA.</li>
+<li>Led the Auth0 authentication migration across all client apps for a faster, modern login flow, rolled out behind a feature flag.</li>
+<li>Migrated CI/CD from CircleCI to GitHub Actions, consolidating pipelines under the company’s GitHub Enterprise account and removing redundant tooling spend.</li>
+<li>Reviewed code for 3 iOS developers within Azure DevOps sprint cycles, working closely with product and backend teams.</li>
+</ul></div></div>
 
-  <!-- About Section -->
-  <section id="about" class="max-w-5xl mx-auto py-16 px-6">
-    <h3 class="text-2xl font-semibold mb-6">About Me</h3>
-    <p class="text-gray-700 leading-relaxed">
-      I’m a passionate developer with experience in iOS, Swift, and machine learning. 
-      I enjoy building apps that make life easier and exploring AI-driven music recognition projects. 
-      I also love contributing to open-source and learning new technologies.
-    </p>
-  </section>
+<div class="job"><div class="when"><strong>Dec 2021 – Jul 2025</strong>Lalitpur, Nepal</div><div>
+<h3>Senior iOS Developer, EB Pearls</h3><p class="what">Software development and design company serving Australian clients</p>
+<ul>
+<li>Led delivery of up to 2 concurrent client projects with cross-functional teams of 10–12, covering dependency analysis, task breakdown and sprint planning.</li>
+<li>Mentored 10+ junior developers through code reviews and direct training, raising team-wide code quality.</li>
+<li>Caught critical design gaps in features under development that engineering and product had both missed, preventing production issues.</li>
+<li>Researched and integrated new frameworks and third-party services, and designed reusable UI components adopted across multiple client projects.</li>
+<li>Delivered production apps including Farm Service Manager and other consumer apps with substantial active user bases.</li>
+</ul></div></div>
 
-  <!-- Projects Section -->
-  <section id="projects" class="bg-gray-100 py-16">
-    <div class="max-w-5xl mx-auto px-6">
-      <h3 class="text-2xl font-semibold mb-6">Projects</h3>
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Project 1 -->
-        <div class="bg-white rounded-xl shadow p-4">
-          <img src="assets/project1.png" alt="Project 1" class="rounded-lg mb-4">
-          <h4 class="text-xl font-bold">Chord Recognition Model</h4>
-          <p class="text-gray-600 mt-2">A deep learning model for detecting chords from audio using CNN + BLSTM architecture.</p>
-          <a href="https://github.com/prashant-sah" target="_blank" class="mt-3 inline-block text-blue-600 hover:underline">View on GitHub</a>
-        </div>
-        <!-- More projects can be added here -->
-      </div>
-    </div>
-  </section>
+<div class="job"><div class="when"><strong>Sep 2021 – Nov 2021</strong>Remote</div><div>
+<h3>iOS Developer, Remote Coach</h3><p class="what">UK-based fitness coaching platform connecting coaches and clients</p>
+<ul>
+<li>Used WatchKit to process and relay real-time health data, surfacing key metrics during live workouts.</li>
+<li>Fixed a critical live video sharing bug, refactored the code structure and delivered a white-label version of the app.</li>
+</ul></div></div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="max-w-5xl mx-auto py-16 px-6">
-    <h3 class="text-2xl font-semibold mb-6">Contact</h3>
-    <p class="text-gray-700">Let’s connect! You can reach me at:</p>
-    <ul class="mt-4 space-y-2">
-      <li>📧 <a href="mailto:youremail@example.com" class="text-blue-600 hover:underline">youremail@example.com</a></li>
-      <li>💼 <a href="https://linkedin.com/in/prashant-sah" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a></li>
-      <li>🐙 <a href="https://github.com/prashant-sah" target="_blank" class="text-blue-600 hover:underline">GitHub</a></li>
-    </ul>
-  </section>
+<div class="job"><div class="when"><strong>Nov 2016 – Aug 2021</strong>Lalitpur, Nepal</div><div>
+<h3>iOS Developer, EB Pearls</h3><p class="what">Software development and design company serving Australian clients</p>
+<ul>
+<li>Built and shipped apps in ride-sharing, chat, social and survey domains, moving codebases from imperative to reactive programming (RxSwift, later Combine).</li>
+<li>Introduced the Coordinator pattern on MVVM and led the migration of a legacy MVC codebase to MVVM-C.</li>
+<li>Moved the UI layer from Storyboards to programmatic Auto Layout for more flexible, reusable components.</li>
+</ul></div></div>
+</div></section>
 
-  <!-- Footer -->
-  <footer class="bg-white border-t text-center py-6 mt-10 text-gray-600">
-    © 2025 Prashant Sah. Built with ❤️ and GitHub Pages.
-  </footer>
+<section id="projects"><div class="wrap">
+<h2>Selected projects</h2>
+<div class="grid">
+<article class="card feature"><h3>Avionté 247, WorkN and KellyNow</h3><p>White-label staffing apps built from one shared iOS framework, serving US staffing agency clients.</p><div class="tags"><span>UIKit</span><span>SwiftUI</span><span>Auth0</span><span>GitHub Actions</span></div></article>
+<article class="card"><h3>Farm Service Manager</h3><p>Australian digital logbook for farm owners and contractors to track service and maintenance history across machinery and vehicles.</p></article>
+<article class="card"><h3>DoubleGuard</h3><p>Wellness platform for first responders that combines biometric data with psychological and social assessments to produce safety and performance insights.</p></article>
+<article class="card"><h3>ACM Agriculture (The Land)</h3><p>Regional news app family for Australia’s largest rural publisher, adding rainfall tracking, livestock market data and machinery listings.</p></article>
+<article class="card"><h3>Caroo</h3><p>Car marketplace for private sellers and dealers, delivered end-to-end including UX/UI design and a companion website.</p></article>
+<article class="card"><h3>YouChoose Pets &amp; Livestock</h3><p>Marketplace for animal breeders with breeder profiles, visual pedigree tracking and in-app breeder verification.</p></article>
+<article class="card"><h3>Ice.Breaker</h3><p>Location-based social app that helps people find and connect with others nearby through a live proximity heat map.</p></article>
+<article class="card"><h3>Dragonfly</h3><p>Ride-sharing app with TomTom Maps for live location and routing, built end-to-end. The client shelved it before launch.</p></article>
+<article class="card"><h3>White Bow Gift Registry</h3><p>iOS and web app for building a gift registry from any store, with real-time purchase tracking to prevent duplicate gifts. No longer live on the App Store.</p></article>
+</div>
+<h2 style="margin-top:56px">Side projects</h2>
+<div class="grid">
+<article class="card"><h3>Chord recognition model</h3><p>A deep learning model that detects chords from audio, using a CNN with a BLSTM.</p><div class="tags"><span>Python</span><span>TensorFlow</span><span>Keras</span></div><a class="link" href="https://github.com/prashant-sah" target="_blank" rel="noopener">View on GitHub</a></article>
+<article class="card"><h3>audio-ios</h3><p>An iOS audio player with adjustable playback rate and pitch.</p><div class="tags"><span>Swift</span></div><a class="link" href="https://github.com/prashant-sah/audio-ios" target="_blank" rel="noopener">View on GitHub</a></article>
+<article class="card"><h3>ShopifyGraphQL</h3><p>A Swift project integrating Shopify through GraphQL.</p><div class="tags"><span>Swift</span><span>GraphQL</span></div><a class="link" href="https://github.com/prashant-sah/ShopifyGraphQL" target="_blank" rel="noopener">View on GitHub</a></article>
+</div>
+</div></section>
 
+<section id="skills"><div class="wrap">
+<h2>Skills and education</h2>
+<div class="skills">
+<div><h3>Languages and UI</h3><div class="tags"><span>Swift</span><span>Objective-C</span><span>UIKit</span><span>SwiftUI</span></div></div>
+<div><h3>Architecture</h3><div class="tags"><span>MVVM-C</span><span>MVVM</span><span>MVC</span><span>Clean Architecture</span><span>Dependency Injection</span></div></div>
+<div><h3>Concurrency and reactive</h3><div class="tags"><span>async/await</span><span>Combine</span><span>RxSwift</span><span>RxCocoa</span></div></div>
+<div><h3>Data and networking</h3><div class="tags"><span>Core Data</span><span>Realm</span><span>REST</span><span>GraphQL</span></div></div>
+<div><h3>Frameworks and SDKs</h3><div class="tags"><span>HealthKit</span><span>WatchKit</span><span>MapKit</span><span>StoreKit</span><span>Auth0</span><span>Firebase</span><span>AWS Amplify</span><span>TomTom</span><span>Google Maps</span><span>CometChat</span><span>Branch</span></div></div>
+<div><h3>Build and release</h3><div class="tags"><span>Swift Package Manager</span><span>CocoaPods</span><span>Fastlane</span><span>GitHub Actions</span><span>CircleCI</span><span>Azure DevOps</span><span>Jira</span></div></div>
+<div><h3>Quality</h3><div class="tags"><span>Unit testing</span><span>Instruments profiling</span><span>Crashlytics</span></div></div>
+</div>
+<div class="edu">
+<p><strong>Master’s in Information &amp; Communication Engineering</strong><br><span>Institute of Engineering, Pulchowk Campus, 2026</span></p>
+<p><strong>Bachelor’s in Electronics &amp; Communication Engineering</strong><br><span>Institute of Engineering, Pulchowk Campus, 2016</span></p>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+<div><h2>Let’s talk</h2><p>I’m open to senior iOS roles and well-structured projects with meaningful impact. Email is the fastest way to reach me.</p></div>
+<div class="cta"><a class="btn" href="mailto:prashantsah1729@gmail.com">Email me</a><a class="btn ghost" href="https://www.linkedin.com/in/prashant-sah-545a5685/" target="_blank" rel="noopener">LinkedIn</a><a class="btn ghost" href="https://github.com/prashant-sah" target="_blank" rel="noopener">GitHub</a></div>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Prashant Sah. Hosted on GitHub Pages.</div></footer>
 </body>
 </html>
